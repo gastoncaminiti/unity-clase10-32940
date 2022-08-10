@@ -9,6 +9,11 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     [Range(1f, 10f)]
     private float speed = 2f;
+
+    [SerializeField]
+    [Range(1f, 10f)]
+    private float runDelay = 2f;
+
     //La enumeración no permite definir una estructura de tipos de elementos.
     enum ZombieTypes { Crawler, Stalker, Rioter };
 
@@ -18,6 +23,8 @@ public class Enemy : MonoBehaviour
     //Guardamos una referencia al transform del player para movernos en su dirección.
     [SerializeField] Transform playerTransform;
 
+    [SerializeField] Animator enemyAnimator;
+ 
     void Start()
     {
         
@@ -30,7 +37,7 @@ public class Enemy : MonoBehaviour
         switch (zombieType)
         {
             case ZombieTypes.Crawler:
-                MoveForward();
+                Invoke("CrawlerMove",runDelay);
                 break;
             case ZombieTypes.Stalker:
                 ChasePlayer();
@@ -39,6 +46,11 @@ public class Enemy : MonoBehaviour
                 RotateAroundPlayer();
                 break;
         }
+    }
+
+    void CrawlerMove(){
+        MoveForward();
+        enemyAnimator.SetBool("IsRun",true);
     }
 
  

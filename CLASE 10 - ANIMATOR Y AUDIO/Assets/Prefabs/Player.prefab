@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  playerAnimator: {fileID: 2050406167502022411}
 --- !u!114 &2125084311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +201,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7438195503057686699}
     m_Modifications:
+    - target: {fileID: 5542774594282710193, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4054763e9d1e72e48ac224d1764d98b8, type: 2}
+    - target: {fileID: 5542774594282710193, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5542774594291698513, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -222,7 +231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5542774594291698513, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5542774594291698513, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -262,6 +271,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
+--- !u!95 &2050406167502022411 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5542774594282710193, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
+  m_PrefabInstance: {fileID: 5809473832959706042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2050406167509502187 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5542774594291698513, guid: 5245a05a33a71f742a0c8f97ea0eb8c3, type: 3}
